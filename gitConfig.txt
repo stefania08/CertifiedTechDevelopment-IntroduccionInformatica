@@ -1,0 +1,55 @@
+// Para inicializar un repositorio debemos estar parados dentro de la carpeta deseada y utilizar el comando
+
+$ git init
+
+// Antes de continuar al siguiente paso debemos crear una cuenta en github o iniciar sesion si ya se tiene una cuenta
+// y crear un nuevo repositorio
+// La URL de github es la siguiente
+
+https://github.com
+
+// Para configurar el usuario y el email debemos utilizar los siguientes comandos
+
+$ git config user.name "DavidAML3" // -> En mi caso es DavidAML3 por que este es mi nick en github
+$ git config user.email "David.aml.3@hotmail.com" // -> En mi caso es David.aml.3@hotmail.com por que este 
+                                                  //    es mi email con el que me registre en github
+
+// Si deseamos que en nuestra computadora siempre este configurado el mismo name y email debemos agregar --global a los comandos
+// de la siguiente manera
+
+$ git config --global user.name "DavidAML3"
+$ git config --global user.email "David.aml.3@hotmail.com"
+
+// Para checar que la configuracion esta perfecta debemos utilizar los siguientes comandos los cuales nos deben devolver
+// el usuario y email dados
+
+$ git config user.name
+$ git config user.email
+
+// Una vez configurado esto podremos vincular nuestro repositorio local con el remoto haciendo uso del siguiente comando
+
+$ git remote add origin https://github.com/DavidAML3/FullStackWeb.git // -> Una vez mas, esta URL es mi caso personal, dicha URL
+                                                                      //    se obtiene cuando se crea un repositorio en github
+
+// Para checar que la configuracion este perfecta debemos utilizar el siguiente comandos
+
+$ git remote -v
+
+// El cual nos debe devolver algo asi
+
+origin	https://github.com/DavidAML3/FullStackWeb.git (fetch)
+origin	https://github.com/DavidAML3/FullStackWeb.git (push)
+
+// Comandos basicos de git
+
+COMANDOS                     // DESCRIPCION
+
+$ git add .                  // Agrega todos los archivos para que esten listos para un commit
+$ git add NOMBRE_ARCHIVO     // Agrega UN solo archivo seleccionado para estar listo para un commit
+$ git status                 // Muestra el estado de mi repositorio local y los archivos listos para hacer commits 
+                                o con nuevos cambios
+$ git commit -m "MENSAJE"    // Crea un nuevo commit con titulo el MENSAJE
+$ git push origin BRANCH     // Envia todos los cambios comiteados al branch del repositorio seleccionado
+$ git push origin master     // Envia todos los cambios a master en el repositorio remoto
+$ git log                    // Muestra el historial de nuestros cambios(commits)
+
